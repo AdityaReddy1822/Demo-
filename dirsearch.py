@@ -1,4 +1,4 @@
-import pyqrcode
-s = "https://www.google.com"
-url = pyqrcode.create(s)
-url.png("qr.png")
+import qrcode
+img = qrcode.make('Some data here')
+type(img)  # qrcode.image.pil.PilImage
+img.save("some_file.png")
